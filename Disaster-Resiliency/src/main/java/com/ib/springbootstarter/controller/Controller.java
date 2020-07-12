@@ -12,10 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Component("MyController")
 public class Controller {
 	
-	/*
-	 * @Autowired com.ib.springbootstarter.APIController.MapAPIController
-	 * MapAPIController;
-	 */
+	@Autowired
+	com.ib.springbootstarter.APIController.MapAPIController MapAPIController;
 
 	@RequestMapping("/hello")
 	public String index() {
@@ -27,11 +25,10 @@ public class Controller {
 		return "hereMap";
 	}
 	
-	/*
-	 * @RequestMapping(value = "/get", method=RequestMethod.GET)
-	 * 
-	 * @ResponseBody public String place(Model model, String place) { String
-	 * location = MapAPIController.getLocation(place); model.addAttribute("message",
-	 * location); return "textResponse"; }
-	 */
+	@RequestMapping(value = "/get", method=RequestMethod.GET)
+	public String place(Model model, String place) {
+		 String location = MapAPIController.getLocation(place);
+		 model.addAttribute("message", location);
+		return "textResponse";
+	}
 }
