@@ -1,4 +1,4 @@
-package com.ib.springbootstarter.APIController;
+package com.ib.manager.APIController;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
