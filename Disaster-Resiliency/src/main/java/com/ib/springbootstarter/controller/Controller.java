@@ -9,15 +9,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @org.springframework.stereotype.Controller
-@Component("MyController")
+@Component("MyController,DBConnection")
 public class Controller {
 	
 	@Autowired
 	com.ib.springbootstarter.APIController.MapAPIController MapAPIController;
-
+	
+	@Autowired
+	com.ib.springbootstarter.service.Services services;
+	
 	@RequestMapping("/hello")
 	public String index() {
+		services.getDisaster();
 		return "Greetings from Spring Boot!";
+		
 	}
 	
 	@RequestMapping(value = "/map", method=RequestMethod.GET)

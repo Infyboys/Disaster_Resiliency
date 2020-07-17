@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan ({"com.ib.springbootstarter.controller","com.ib.springbootstarter.APIcontroller"})
+//@ComponentScan ({"com.ib.springbootstarter.controller","com.ib.springbootstarter.APIcontroller"})
 public class Application extends SpringBootServletInitializer{
 	
 	public static void main(String[] args) {
