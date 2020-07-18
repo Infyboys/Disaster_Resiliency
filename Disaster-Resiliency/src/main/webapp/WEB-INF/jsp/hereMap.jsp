@@ -35,6 +35,7 @@
   </head>
   <body id="markers-on-the-map">
   	<div id = "message" hidden= "hidden">${message}</div>
+  	<div id = "disasterList" hidden= "hidden">${disasterList}</div>
   	<div id ="errorMessage"></div>
     <div class="page-header">
         <h1>Map at a specified location</h1>
@@ -44,7 +45,9 @@
     <form class="form-horizontal" id="searchForm">
 	    <div class="form-group">
 	    	<label>Disaster Name</label>
-	    	<input id="disaster" type="text">
+	    	<input list="disasters" id="disaster" type="text">
+			<datalist id="disasters">
+			</datalist>
 	    </div>
 	    <div class="form-group">
 	    	<label>From Date</label>
