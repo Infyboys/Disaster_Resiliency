@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ib.springbootstarter.APIController.NewsAPIController;
+import com.ib.springbootstarter.beans.Disaster;
 import com.ib.springbootstarter.beans.History;
 
 @org.springframework.stereotype.Controller
@@ -41,6 +42,21 @@ public class Controller {
 	
 	@RequestMapping(value = "/map", method=RequestMethod.GET)
 	public String map(Model model) {
+		try {
+			List<Disaster> disasters =   services.getDisaster();
+			 ObjectMapper Obj = new ObjectMapper(); 
+			 String jsonStr = Obj.writeValueAsString(disasters);
+			 model.addAttribute("disasterList", jsonStr);
+		} catch (JsonGenerationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JsonMappingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return "hereMap";
 	}
 	
