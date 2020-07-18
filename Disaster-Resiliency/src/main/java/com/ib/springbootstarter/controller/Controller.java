@@ -1,4 +1,4 @@
-package com.ib.manager.controller;
+package com.ib.springbootstarter.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,16 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.ib.springbootstarter.APIController.NewsAPIController;
 
 @org.springframework.stereotype.Controller
 @Component("MyController")
 public class Controller {
 	
 	@Autowired
-	com.ib.manager.APIController.MapAPIController MapAPIController;
+	com.ib.springbootstarter.APIController.MapAPIController MapAPIController;
 	
 	@Autowired
-	com.ib.manager.APIController.NewsAPIController NewsAPIController;
+	NewsAPIController NewsAPIController;
 
 	@RequestMapping("/hello")
 	public String index() {
@@ -36,10 +37,10 @@ public class Controller {
 		return "textResponse";
 	}
 	
-	@RequestMapping(value = "/load", method=RequestMethod.GET)
-	public String load(Model model, String disaster, String place, String start, String end) {
-		 NewsAPIController.loadNews();
-		 model.addAttribute("message", "success");
+	@RequestMapping(value = "/news", method=RequestMethod.GET)
+	public String news(Model model, String disaster, String place, String start, String end) {
+		 String news = NewsAPIController.getNews(disaster, place, start, end);
+		 model.addAttribute("message", news);
 		return "textResponse";
 	}
 }

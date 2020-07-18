@@ -1,4 +1,4 @@
-package com.ib.manager.DAO;
+package com.ib.springbootstarter.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,9 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import org.springframework.stereotype.Component;
 
-@Component("JDBCHandler")
 public class JDBCHandler {
 	
 	static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
@@ -63,7 +61,7 @@ public class JDBCHandler {
 		System.out.println("Goodbye!");
 	}//end main
 	
-	public static void addData(int locationId, int disasterId, String date, String keyPoints , String articleLink) {
+	public static void addData() {
 		Connection conn = null;
 		Statement stmt = null;
 		try{
@@ -77,17 +75,25 @@ public class JDBCHandler {
 			System.out.println("Creating statement...");
 			stmt = conn.createStatement();
 			String sql;
-			sql = "INSERT into History(locationId,disasterId,date,keyPoints,articleLink) VALUES (";
-			
-			sql += locationId + ",";
-			sql += disasterId + ",";
-			sql += "'" + date + "'" + ",";
-			sql += "'" + keyPoints + "'" + ",";
-			sql += "'" + articleLink + "')";
-			int a = stmt.executeUpdate(sql);
+			sql = "INSERT into ";
+			ResultSet rs = stmt.executeQuery(sql);
 
-			
-			
+			//STEP 5: Extract data from result set
+			while(rs.next()){
+				//Retrieve by column name
+				int id  = rs.getInt("id");
+				int age = rs.getInt("age");
+				String first = rs.getString("first");
+				String last = rs.getString("last");
+
+				//Display values
+				System.out.print("ID: " + id);
+				System.out.print(", Age: " + age);
+				System.out.print(", First: " + first);
+				System.out.println(", Last: " + last);
+			}
+			//STEP 6: Clean-up environment
+			rs.close();
 			stmt.close();
 			conn.close();
 		}catch(SQLException se){
