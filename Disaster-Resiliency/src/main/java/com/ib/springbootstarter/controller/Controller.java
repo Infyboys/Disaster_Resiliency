@@ -18,11 +18,15 @@ public class Controller {
 	com.ib.springbootstarter.APIController.MapAPIController MapAPIController;
 	
 	@Autowired
+	com.ib.springbootstarter.service.Services services;
+	
 	NewsAPIController NewsAPIController;
 
 	@RequestMapping("/hello")
 	public String index() {
+		services.getDisaster();
 		return "Greetings from Spring Boot!";
+		
 	}
 	
 	@RequestMapping(value = "/map", method=RequestMethod.GET)

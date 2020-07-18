@@ -66,7 +66,7 @@ var map = new H.Map(document.getElementById('map'),
   pixelRatio: window.devicePixelRatio || 1
 });
 // add a resize listener to make sure that the map occupies the whole container
-window.addEventListener('resize', () => map.getViewPort().resize());
+window.addEventListener('resize', () = map.getViewPort().resize());
 
 //Step 3: make the map interactive
 // MapEvents enables the event system
@@ -80,5 +80,5 @@ var ui = H.ui.UI.createDefault(map, defaultLayers);
 window.onload = function () {
   moveMapToBerlin(map);
   //addMarkersToMap(map);
-	addSVGMarkers(map)
+	addSVGMarkers(map);
 }
