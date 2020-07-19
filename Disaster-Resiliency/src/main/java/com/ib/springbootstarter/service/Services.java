@@ -72,6 +72,10 @@ public class Services {
 	}
 	
 	public String loadHistoryTable(){
+		
+		String clearSql = "DELETE FROM History";
+		jdbcTemplate.update(clearSql);
+		
 		List<Disaster> disasters=getDisaster();
 		List<Location> locations=getLocation();
 		List<History> histories = new ArrayList<History>();
@@ -87,7 +91,7 @@ public class Services {
 								location.getLatitude(), doc.getHeadline().getPrint_headline(),doc.getWeb_url());*/
 				String sql = "INSERT INTO History (locationId, disasterId, date, keyPoints, articleLink) "
 						+ "VALUES (?, ?, ?, ?, ?)";
-				jdbcTemplate.update(sql,location.getId(),disaster.getId(),"2020-07-19",doc.getHeadline().getPrint_headline(),doc.getWeb_url());
+				jdbcTemplate.update(sql,location.getId(),disaster.getId(),doc.getPub_date().substring(0,10),doc.getHeadline().getMain(),doc.getWeb_url());
 				//histories.add(history);
 			}
 			
