@@ -69,13 +69,13 @@ public class Controller {
 		return "textResponse";
 	}
 	
-	@RequestMapping(value = "/news", method=RequestMethod.GET)
-
-	public String news(Model model, String disaster, String place, String start, String end) {
-		 Article news = NewsAPIController.getNews(disaster, place, start, end);
-		 model.addAttribute("message", news.getResponse());
-		return "textResponse";
-	}
+//	@RequestMapping(value = "/news", method=RequestMethod.GET)
+//
+//	public String news(Model model, String disaster, String place, String start, String end) {
+//		 Article news = NewsAPIController.getNews(disaster, place, start, end);
+//		 model.addAttribute("message", news.getResponse());
+//		return "textResponse";
+//	}
 	
 	@RequestMapping(value = "/history", method=RequestMethod.GET)
 	public String news(Model model,HttpServletRequest request, HttpServletResponse response,String disaster, String startDate, String endDate) {
