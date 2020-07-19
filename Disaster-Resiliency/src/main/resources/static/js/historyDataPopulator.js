@@ -23,9 +23,12 @@ function submitForm(){
 			type:'get',
 		  	success:function(json){
 				$("#message").text(json);
+				$("#errorMessage").text('');
+				map.removeObjects(map.getObjects());
 				populateLocation();
 		  	},
 			error:function(error){
+				map.removeObjects(map.getObjects());
 				$("#errorMessage").text(error.responseText);
 			}
 		});
