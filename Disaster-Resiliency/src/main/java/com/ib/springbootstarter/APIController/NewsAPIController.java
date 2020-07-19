@@ -18,7 +18,7 @@ public class NewsAPIController {
 	    uri += "&q=" + disaster + "+" + place;
 	   // uri += "&begin_date=" + start;
 	   // uri += "&end_date=" + end;
-	    uri += "&fl=web_url,headline";
+	    uri += "&fl=web_url,headline,pub_date";
 	    
 	    RestTemplate restTemplate = new RestTemplate();
 	    Article result = restTemplate.getForObject(uri, Article.class);

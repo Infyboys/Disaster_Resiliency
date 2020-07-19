@@ -69,13 +69,26 @@ public class Controller {
 		return "textResponse";
 	}
 	
-//	@RequestMapping(value = "/news", method=RequestMethod.GET)
-//
-//	public String news(Model model, String disaster, String place, String start, String end) {
-//		 Article news = NewsAPIController.getNews(disaster, place, start, end);
-//		 model.addAttribute("message", news.getResponse());
-//		return "textResponse";
-//	}
+	@RequestMapping(value = "/news", method=RequestMethod.GET)
+
+	public String news(Model model, String disaster, String place, String start, String end) {
+		try {
+			List<History> historyRecord =   services.getHistory("","","");
+			 ObjectMapper Obj = new ObjectMapper(); 
+			 String jsonStr = Obj.writeValueAsString(historyRecord);
+			 model.addAttribute("message", jsonStr);
+		} catch (JsonGenerationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JsonMappingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "textResponse";
+	}
 	
 	@RequestMapping(value = "/history", method=RequestMethod.GET)
 	public String news(Model model,HttpServletRequest request, HttpServletResponse response,String disaster, String startDate, String endDate) {
@@ -106,8 +119,8 @@ public class Controller {
 	}
 	
 	@RequestMapping(value = "/load", method=RequestMethod.GET)
-	public String loadDisaster(Model model) {
-		 services.loadDisaster();
+	public String loadHistory(Model model) {
+		 services.loadHistoryTable();
 		return "textResponse";
 	}
 }
