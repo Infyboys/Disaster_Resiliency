@@ -72,7 +72,7 @@ public class Controller {
 	@RequestMapping(value = "/news", method=RequestMethod.GET)
 
 	public String news(Model model, String disaster, String place, String start, String end) {
-		 Article news = NewsAPIController.getNews(disaster, place, start, end);
+		 Article news = NewsAPIController.getNews(disaster, place);
 		 model.addAttribute("message", news.getResponse());
 		return "textResponse";
 	}

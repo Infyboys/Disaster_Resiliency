@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.ib.springbootstarter.APIController.NewsAPIController;
-import com.ib.springbootstarter.beans.Article;
 import com.ib.springbootstarter.beans.Disaster;
 import com.ib.springbootstarter.beans.Docs;
 import com.ib.springbootstarter.beans.History;
@@ -51,11 +50,14 @@ public class Services {
 		for (Location location : locations) {
 			List<Docs> docs=newsAPIController.getNews(disaster.getName(),location.getCity()).getResponse().getDocs();
 			for (Docs doc : docs) {
-				History history = new History
+				/*History history = new History
 						("date", disaster.getName(), location.getCity(), 
 								location.getState(), location.getCountry(), location.getLongitude(), 
-								location.getLatitude(), doc.getHeadline().getPrint_headline(),doc.getWeb_url());
-				histories.add(history);
+								location.getLatitude(), doc.getHeadline().getPrint_headline(),doc.getWeb_url());*/
+				String sql = "INSERT INTO History (locationId, disasterId, date, keyPoints, articleLink) "
+						+ "VALUES (?, ?, ?, ?, ?)";
+				jdbcTemplate.update(sql,location.getId(),disaster.getId(),"2020-07-19",doc.getHeadline().getPrint_headline(),doc.getWeb_url());
+				//histories.add(history);
 			}
 			
 		}
