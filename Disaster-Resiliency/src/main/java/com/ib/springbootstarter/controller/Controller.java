@@ -104,4 +104,10 @@ public class Controller {
 		
 		return "textResponse";
 	}
+	
+	@RequestMapping(value = "/load", method=RequestMethod.GET)
+	public String loadDisaster(Model model) {
+		 services.loadDisaster();
+		return "textResponse";
+	}
 }
