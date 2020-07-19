@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ib.springbootstarter.APIController.NewsAPIController;
+import com.ib.springbootstarter.beans.Article;
 
 @org.springframework.stereotype.Controller
 @Component("MyController")
@@ -20,6 +21,7 @@ public class Controller {
 	@Autowired
 	com.ib.springbootstarter.service.Services services;
 	
+	@Autowired
 	NewsAPIController NewsAPIController;
 
 	@RequestMapping("/hello")
@@ -42,9 +44,10 @@ public class Controller {
 	}
 	
 	@RequestMapping(value = "/news", method=RequestMethod.GET)
+
 	public String news(Model model, String disaster, String place, String start, String end) {
-		 String news = NewsAPIController.getNews(disaster, place, start, end);
-		 model.addAttribute("message", news);
+		 Article news = NewsAPIController.getNews(disaster, place, start, end);
+		 model.addAttribute("message", news.getResponse());
 		return "textResponse";
 	}
 }
