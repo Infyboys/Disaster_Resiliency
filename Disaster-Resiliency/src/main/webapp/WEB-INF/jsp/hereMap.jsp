@@ -11,10 +11,15 @@
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<script src="/js/historyDataPopulator.js"></script>
+	
     <style type="text/css">
     #map {
-	    width: 50%;
-    	float:right;
+	    /* width: 50%;
+    	float:right; */
 	    height: 450px;
 	    background: grey;
 	}
@@ -23,19 +28,40 @@
 	    width: 100%;
 	    height: 400px;
 	}
+	body{
+		margin-left: 3%!important;
+	}
     </style>
   </head>
   <body id="markers-on-the-map">
+  	<div id = "message" hidden= "hidden">${message}</div>
+  	<div id = "disasterList" hidden= "hidden">${disasterList}</div>
+  	<div id ="errorMessage"></div>
     <div class="page-header">
         <h1>Map at a specified location</h1>
         <p>Display a map at a specified location and zoom level</p>
     </div>
-    <p>This example displays a movable map initially centered on the <b>Brandenburg Gate</b> in the centre of Berlin <i>(52.5159°N, 13.3777°E)</i></p>
+    
+    <form class="form-horizontal" id="searchForm">
+	    <div class="form-group">
+	    	<label>Disaster Name</label>
+	    	<input list="disasters" id="disaster" type="text">
+			<datalist id="disasters">
+			</datalist>
+	    </div>
+	    <div class="form-group">
+	    	<label>From Date</label>
+	    	<input id="startDate" type="date">
+	    </div>
+	    <div class="form-group">
+	    	<label>To Date</label>
+	    	<input id="endDate" type="date">
+	    </div>
+	    <input type="button" class="btn btn-primary" value="Search" onclick="submitForm()">
+	</form>
+	
     <div id="map"></div>
-    <!-- <h3>Code</h3>
-    <p>
-        The <code>map.setCenter()</code> method and <code>map.setZoom() </code>method are able to control the location of the map.<br>
-    </p> -->
+
     <script type="text/javascript" src="/js/mapLoader.js"></script>
   </body>
 </html>
