@@ -37,8 +37,11 @@ What things you need to install the software
 A step by step series of examples that tell you how to get a development env running
 
 Go to the root of the downloaded project in CLI
+
+```bash
 >>cd <Root>\Disaster_Resiliency\Disaster-Resiliency
 >>mvn spring-boot:run
+```
 
 That's it.
 
