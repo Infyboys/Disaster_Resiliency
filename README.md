@@ -4,18 +4,56 @@ An application for the aid of travellers to show the natural disasters that occu
 ## Contents
 
 1. [Short description](#short-description)
+1. [Getting started](#getting-started)
 
 
 ## Short description
 
 ### What's the problem?
 
-Part of the World Health Organization's guidance on limiting further spread of COVID-19 is to practice social distancing. As a result, schools in most affected areas are taking precautionary measures by closing their facilities. With school-aged children at home for an indeterminate amount of time,  keeping them engaged, entertained, and on top of their education is important.
+With the increase in world tourism, number of cross-border travellers has increased around the globe. When a natural disaster hits an area, the tourists suffer the most.T
 
 ### How can technology help?
 
-Schools and teachers can continue to engage with their students through virtual classrooms, and even create interactive spaces for classes. As parents face a new situation where they may need to homeschool their children, finding appropriate online resources is important as well.
+It is necessary to make the tourists aware about the climate as well as the history of disasters that occurred at a place over a period of time.
 
 ### The idea
 
-It's imperative that learning and creating can continue when educational institutions have to shift the way they teach in times of crises, such as the COVID-19 pandemic. Providing a set of open source tools, backed by IBM Cloud and Watson Services, will enable educators to more easily make content available for their students.
+It's important to provide the tourists a guide to check the history of natural calamities, its severities, preparations required before making arrangements for the tour. An application with easy-to-search UI with map interface will help them go through various places and their history.
+
+## Getting started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```bash
+dnf install wget
+wget http://www.example.com/install.sh
+bash install.sh
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+Say what the step will be, for example
+
+```bash
+export TOKEN="fffd0923aa667c617a62f5A_fake_token754a2ad06cc9903543f1e85"
+export EMAIL="jane@example.com"
+dnf install npm
+node samplefile.js
+Server running at http://127.0.0.1:3000/
+```
+
+And repeat
+
+```bash
+curl localhost:3000
+Thanks for looking at Code-and-Response!
+```
+
+End with an example of getting some data out of the system or using it for a little demo
