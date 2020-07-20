@@ -27,7 +27,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## The architecture
 
-[You can go through the architecture here.](Disaster-resiliency-Arch.png)
+![You can go through the architecture here.](Disaster-resiliency-Arch.png)
 
 ### Prerequisites
 
