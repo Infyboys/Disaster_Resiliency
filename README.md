@@ -35,6 +35,7 @@ What things you need to install the software
 
 * [install java](https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html)
 * [install maven](https://maven.apache.org/install.html)
+* [install tomcat](https://tomcat.apache.org/tomcat-7.0-doc/setup.html)
 
 ### Installing
 
@@ -56,6 +57,7 @@ Your code is up and running at localhost:8080
 * [Maven](https://maven.apache.org/) - Dependency management
 * [Java](https://www.java.com/en/) - Code logic
 * [IBM DB2](https://cloud.ibm.com/catalog?search=db2) - The database used
+* [Tomcat](https://tomcat.apache.org/) - Web server
 
 ## Authors
 
