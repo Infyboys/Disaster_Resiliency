@@ -4,6 +4,7 @@ An application for the aid of travellers to show the natural disasters that occu
 ## Contents
 
 1. [Short description](#short-description)
+1. [The architecture](#the-architecture)
 1. [Getting started](#getting-started)
 
 
@@ -11,7 +12,7 @@ An application for the aid of travellers to show the natural disasters that occu
 
 ### What's the problem?
 
-With the increase in world tourism, number of cross-border travellers has increased around the globe. When a natural disaster hits an area, the tourists suffer the most.T
+With the increase in world tourism, number of cross-border travellers has increased around the globe. When a natural disaster hits an area, the tourists suffer the most.
 
 ### How can technology help?
 
@@ -21,13 +22,13 @@ It is necessary to make the tourists aware about the climate as well as the hist
 
 It's important to provide the tourists a guide to check the history of natural calamities, its severities, preparations required before making arrangements for the tour. An application with easy-to-search UI with map interface will help them go through various places and their history.
 
-## Getting started
-
-These instructions will get you a copy of the project up and running on your local machine for development purposes. See deployment for notes on how to deploy the project on a live system.
-
 ## The architecture
 
 ![You can go through the architecture here.](Disaster-resiliency-Arch.png)
+
+## Getting started
+
+These instructions will get you a copy of the project up and running on your local machine for development purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
