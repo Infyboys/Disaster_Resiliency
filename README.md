@@ -55,7 +55,7 @@ Your code is up and running at localhost:8080
 ## Built with
 
 * [Maven](https://maven.apache.org/) - Dependency management
-* [Java](https://www.java.com/en/) - Code logic
+* [Java Springboot](https://www.java.com/en/) - Code logic
 * [IBM DB2](https://cloud.ibm.com/catalog?search=db2) - The database used
 * [Tomcat](https://tomcat.apache.org/) - Web server
 
