@@ -61,5 +61,5 @@ Your code is up and running at localhost:8080
 
 ## Authors
 
-* **Ansuman Nayak** - [PurpleBooth](https://github.com/PurpleBooth)
+* **Ansuman Nayak** - [Infyboys](https://github.com/Infyboys/)
 * **Rajesh Nayak** - [rajanhhh](https://github.com/rajanhhh)
