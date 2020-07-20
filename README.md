@@ -50,7 +50,7 @@ Go to the root of the downloaded project in CLI
 
 That's it.
 
-Your code is up and running at localhost:8080
+Your code is up and running at localhost:8080/map
 
 ## Built with
 
