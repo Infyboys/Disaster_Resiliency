@@ -30,7 +30,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software
 
 * [install java](https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html)
-* [install maven](https://maven.apache.org/)
+* [install maven](https://maven.apache.org/install.html)
 
 ### Installing
 
@@ -48,9 +48,9 @@ Your code is up and running at localhost:8080
 
 * [Maven](https://maven.apache.org/) - Dependency management
 * [Java](https://www.java.com/en/) - Code logic
+* [IBM DB2](https://cloud.ibm.com/catalog?search=db2) - The database used
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/Code-and-Response/Project-Sample/graphs/contributors) who participated in this project.
+* **Ansuman Nayak** - [PurpleBooth](https://github.com/PurpleBooth)
+* **Rajesh Nayak** - [rajanhhh](https://github.com/rajanhhh)
