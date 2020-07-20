@@ -6,6 +6,8 @@ An application for the aid of travellers to show the natural disasters that occu
 1. [Short description](#short-description)
 1. [The architecture](#the-architecture)
 1. [Getting started](#getting-started)
+1. [Built with](#built-with)
+1. [Authors](#authors)
 
 
 ## Short description
