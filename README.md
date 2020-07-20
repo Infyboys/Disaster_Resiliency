@@ -27,33 +27,30 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install the software
 
-```bash
-dnf install wget
-wget http://www.example.com/install.sh
-bash install.sh
-```
+* [install java](https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html)
+* [install maven](https://maven.apache.org/)
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be, for example
+Go to the root of the downloaded project in CLI
+>>cd <Root>\Disaster_Resiliency\Disaster-Resiliency
+>>mvn spring-boot:run
 
-```bash
-export TOKEN="fffd0923aa667c617a62f5A_fake_token754a2ad06cc9903543f1e85"
-export EMAIL="jane@example.com"
-dnf install npm
-node samplefile.js
-Server running at http://127.0.0.1:3000/
-```
+That's it.
 
-And repeat
+Your code is up and running at localhost:8080
 
-```bash
-curl localhost:3000
-Thanks for looking at Code-and-Response!
-```
+## Built with
 
-End with an example of getting some data out of the system or using it for a little demo
+* [Maven](https://maven.apache.org/) - Dependency management
+* [Java](https://www.java.com/en/) - Code logic
+
+## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/Code-and-Response/Project-Sample/graphs/contributors) who participated in this project.
