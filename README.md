@@ -36,7 +36,6 @@ What things you need to install the software
 
 * [install java](https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html)
 * [install maven](https://maven.apache.org/install.html)
-* [install tomcat](https://tomcat.apache.org/tomcat-7.0-doc/setup.html)
 
 ### Installing
 
