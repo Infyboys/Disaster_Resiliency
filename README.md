@@ -25,6 +25,10 @@ It's important to provide the tourists a guide to check the history of natural c
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+## The architecture
+
+[You can go through the architecture here.](Disaster-resiliency-Arch.png)
+
 ### Prerequisites
 
 What things you need to install the software
